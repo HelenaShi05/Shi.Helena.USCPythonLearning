@@ -1,1 +1,15 @@
-item 1
+item1Name= "apple"
+item1Cost= 0.55
+item1Quantity = 2
+
+item2Name= "pie"
+item2Cost= 8.90
+item2Quantity= 1
+
+tax= 1.075
+item1TotalCost= item1Cost * item1Quantity
+item2TotalCost= item2Cost * item2Quantity
+totalCost = item1TotalCost + item2TotalCost
+
+costAfterTax= totalCost * tax
+print(costAfterTax)
