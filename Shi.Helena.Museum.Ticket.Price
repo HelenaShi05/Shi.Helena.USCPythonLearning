@@ -1,0 +1,37 @@
+print("Welcome to the Museum of Cheese!")
+print("Please reply to the information below for your ticket")
+age= input("Please state your age:")
+day= input("Please state the day which you wish to attend:")
+coupon= input("Do you have any coupons:")
+days= ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+if age.isalpha() or int(age)<0:
+    print("Please state a valid age")
+elif day not in days:
+    print("Please enter a valid date")
+if 0<= int(age) <=5:
+    price= 0
+if 6<= int(age) <= 17:
+    if day == 'Monday':
+     price= 5
+    elif day in ['Tuesday', 'Wednesday', 'Thursday']:
+     price= 10
+    else:
+     price= 15
+if 18<= int(age) <=64:
+    if day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday']:
+     price= 10
+    else:
+     price= 25
+if int(age) >= 65:
+    if day in ['Monday', 'Tuesday', 'Wednesday', 'Thursday']:
+     price=10
+    else:
+     price= 15
+if coupon == 'HALFOFF':
+    price/=2
+if coupon== 'MINUS5':
+    price-=5
+if price<= 0:
+    print("Price: $0.00 (FREE)")
+else:
+    print("Price:" + "$" + str(price))
