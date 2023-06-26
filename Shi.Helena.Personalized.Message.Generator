@@ -1,0 +1,13 @@
+print ("Welcome to personalized name generator!")
+first_name = input("Please enter your first name:")
+last_name = input("Please enter your last name:")
+age = int(input("Please enter your age:"))
+number = int(input("Please enter an integer:"))
+fav_color =input("Please enter your favorite color:")
+future_age= age + number
+name_length = len(first_name) + len(last_name)
+print ("Hello" + first_name +"" + last_name +"!")
+print ("Your name is"  +  str(name_length)  + "characters long !")
+print ("In" + str(number)  +  "years, you will be" + str(future_age) +  "years old!")
+print ("Your favorite color is" + fav_color.upper() + "!")
+print ("Thank you for using personalized message generator!")
